@@ -29,5 +29,6 @@ public class assignment2 {
 		driver.findElement(By.xpath("//input[@value='Search']")).click();
 		driver.switchTo().alert().accept();
 	}
+	//comments added
 
 }
