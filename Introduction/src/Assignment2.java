@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class assignment2 {
+public class Assignment2 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -16,7 +16,6 @@ public class assignment2 {
 		driver.findElement(By.id("Editbox13_show")).click();
 		driver.findElement(By.id("Editbox13_show")).sendKeys("DEL");
 
-		Thread.sleep(3000);
 		driver.findElement(By.xpath("//li[@class='active-date']")).click();
 		// driver.findElement(By.className("active-date")).click();
 

@@ -1,25 +1,27 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Assignment3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//driver.findElement(By.id("FromSector_show")).click();
-				//driver.findElement(By.id("FromSector_show")).sendKeys("DEL");
-				//driver.findElement(By.id("Editbox13_show")).click();
-				//driver.findElement(By.id("Editbox13_show")).sendKeys("DEL");
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\arpit\\Documents\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 
-				//driver.findElement(By.xpath("//li[@class='active-date']")).click();
-				// driver.findElement(By.className("active-date")).click();
+		driver.get("http://www.itgeared.com/demo/1506-ajax-loading.html");
+		
+		driver.findElement(By.cssSelector("a[href*='loadAjax']")).click();
+		WebDriverWait w=new WebDriverWait(driver,20);
+		//WebDriverWait d=new WebDriverWait(driver,20);
+		w.until(ExpectedConditions.elementToBeClickable(By.id("results")));
+		System.out.println(driver.findElement(By.id("results")).getText());
+		
 
-				//driver.findElement(By.className("dropbtn_n9")).click();
-				//Thread.sleep(2000L);
-				//for (int i = 1; i < 5; i++) {
-					//driver.findElement(By.className("plus_box1")).click();
-				//}
 
-				//driver.findElement(By.xpath("//input[@value='Search']")).click();
-				//driver.switchTo().alert().accept();
-
-	}
+}
 
 }
